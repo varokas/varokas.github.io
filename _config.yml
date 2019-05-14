@@ -13,14 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: Minimal Engineering
+email: varokas@panusuwan.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Varokas Blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.varokas.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -29,9 +27,70 @@ markdown: kramdown
 theme: alembic-jekyll-theme
 remote_theme: daviddarnes/alembic
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-paginate
   - jekyll-seo-tag
-service_worker: false
+  - jekyll-redirect-from
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-commonmark
+  - jekyll-include-cache
+  - jemoji
+
+jekyll-mentions: https://twitter.com
+twitter:
+  username: varokas
+author: varokas
+social: # jekyll-seo-tag > social overrides
+  name: Varokas Panusuwan # jekyll-seo-tag > real name
+  links:  # jekyll-seo-tag > social aliases (sameAs)
+    - https://twitter.com/varokas
+    - https://www.facebook.com/varokas
+    - https://www.linkedin.com/in/varokas
+    - https://github.com/varokas
+sass:
+  style: compressed # Style compression
+permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+excerpt_separator: <!-- more --> # Marks end of excerpt in posts
+#timezone: Europe/London
+
+collections:
+  posts:
+    title: Posts # Needed for Siteleaf
+    output: true
+    #description: "My thoughts and ideas" # The post list page content
+    #feature_text: |
+    #  Welcome to the blog
+    #feature_image: "https://picsum.photos/2560/600?image=866"
+
+encoding: utf-8 # Make sure the encoding is right
+lang: en-us # Set the site language
+title: "Minimal Engineering"
+#description: "Alembic is a starting point for Jekyll projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately" # Site description and default description, also used in jekyll-seo-tag
+url: "https://www.varokas.com" # Site url, also used in jekyll-seo-tag
+logo: "/assets/logo/logo.png" # Site logo, also used in jekyll-seo-tag
+
+navigation_header: 
+  Home: /
+  Search: /search/
+
+navigation_footer:
+  Home: /
+  Search: /search/
+
+
+social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+  Twitter: https://twitter.com/varokas
+  LinkedIn: https://www.linkedin.com/in/varokas
+  GitHub: https://github.com/varokas
+  RSS: /feed.xml
+
+google_analytics: UA-37124574-3
+
+sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
+  Twitter: "#0d94e7"
+  facebook: "#3B5998"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
