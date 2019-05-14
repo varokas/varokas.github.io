@@ -19,8 +19,14 @@ description: >- # this means to ignore newlines until "baseurl:"
   Varokas Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.varokas.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: varokas
+github_username: varokas
+
+defaults:
+  - scope:
+      path: "img"
+    values:
+      image: true
 
 # Build settings
 markdown: kramdown
@@ -38,6 +44,9 @@ plugins:
   - jekyll-include-cache
   - jemoji
 
+
+paginate: 3 # jekyll-paginate > items per page
+paginate_path: blog/page:num # jekyll-paginate > blog page
 jekyll-mentions: https://twitter.com
 twitter:
   username: varokas

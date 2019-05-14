@@ -1,0 +1,47 @@
+---
+layout:	post
+title:	"Docker(s) for Windows"
+date:	2017-06-15
+---
+
+  There are at least two ways to use Docker in Windows. Some major differences we have to be careful before diving in.
+
+#### Docker is not a VM
+
+The most important concept to know is that Docker is not a VM. Linux programs won’t magically runs within Windows when we use Docker.
+
+Simple rules to remember:
+
+* Windows Containers runs only in Windows.
+* Linux Container runs only in Linux.
+#### 1st method: Docker Toolbox
+
+This what happened when we go to official Docker website follow the download link for [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
+
+In essence there will be a Linux VM running within Windows all times. All docker commands typed in the command line are just routed to a docker daemon running within this Linux VM.
+
+Most docker images in the official registry are created for Linux and will be able to run with this method.
+
+The setup used to be pretty complicated but this becomes much easier since Hyper-V is now part of Windows 10 so there’s no need to download additional VirtualBox or other VM Host software.
+
+**Important Points**
+
+* Hyper-V is only available in Windows 10 Professional.
+* MobyVM running in Hyper-V has limited RAM assigned to it. Watch out for containers that may eat up all those precious RAM.
+* Law of Physics dictates: More RAM to VM = Less RAM to Windows. Take that to account as well.
+![](/img/1*I_jBNUMmuuIm_ACfAjSaTA.png)#### 2nd method: Microsoft Windows Container
+
+This is Microsoft’s own container technology, aptly named [Microsoft Windows Container](https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/) which becomes available starting from Windows 10 Anniversary Edition and Windows Server 2016.
+
+Considered this approach “native” docker for Windows. All docker commands talks directly to this Windows Container subsystem.
+
+Most containers in registry will not work here because they were made as linux containers. Notable exception is of course [Microsoft official Docker Repos](https://hub.docker.com/u/microsoft/) except for SQL Server for Linux and a few things
+
+The starting point for this method is not very obvious and Googling “Docker for Windows” will mostly yield documentations from the first method. Luckily the complicated multi-step setup has been revamped to a simple few steps in [Windows Containers on Windows 10](https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/quick-start-windows-10) link.
+
+**Important Points**
+
+* Windows Container is only available in Windows 10 Professional.
+* Read the Prerequisites carefully
+* If you are using Parallels, this is how to turn on Nested Virtualization Support <http://kb.parallels.com/en/116239>
+  
