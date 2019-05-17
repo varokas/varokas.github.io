@@ -61,7 +61,7 @@ social: # jekyll-seo-tag > social overrides
 sass:
   style: compressed # Style compression
 permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
-excerpt_separator: <!-- more --> # Marks end of excerpt in posts
+# excerpt_separator: <!-- more --> # Marks end of excerpt in posts
 #timezone: Europe/London
 
 collections:
