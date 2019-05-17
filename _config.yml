@@ -30,7 +30,7 @@ defaults:
 
 # Build settings
 markdown: kramdown
-theme: alembic-jekyll-theme
+#theme: alembic-jekyll-theme
 remote_theme: daviddarnes/alembic
 plugins:
   - jekyll-sitemap
