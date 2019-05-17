@@ -4,8 +4,9 @@ title:	"Zeppelin — Notebook สำหรับApache Sparks"
 date:	2019-01-05
 ---
 
-  ![](/img/1*bJigZtBnodqs4vw8QbezEA.png)สำหรับคนที่ติดใจเขียนโปรแกรมแบบ notebook ผ่าน jupyter ตอนนี้มีโปรเจคที่ค่อนข้างใหม่ชื่อ Apache Zeppelin เหมาะมากสำหรับสาย data ที่ใช้ Apache Sparks
-<!--more-->
+  ![](/img/1*bJigZtBnodqs4vw8QbezEA.png)
+  
+สำหรับคนที่ติดใจเขียนโปรแกรมแบบ notebook ผ่าน jupyter ตอนนี้มีโปรเจคที่ค่อนข้างใหม่ชื่อ Apache Zeppelin เหมาะมากสำหรับสาย data ที่ใช้ Apache Sparks
 
 ข้อดีหลักๆ
 
