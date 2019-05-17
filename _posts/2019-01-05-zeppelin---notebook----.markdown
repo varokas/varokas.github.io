@@ -4,7 +4,7 @@ title:	"Zeppelin — Notebook สำหรับApache Sparks"
 date:	2019-01-05
 ---
 
-  ![](/img/1*bJigZtBnodqs4vw8QbezEA.png)
+![](/img/1*bJigZtBnodqs4vw8QbezEA.png)
   
 สำหรับคนที่ติดใจเขียนโปรแกรมแบบ notebook ผ่าน jupyter ตอนนี้มีโปรเจคที่ค่อนข้างใหม่ชื่อ Apache Zeppelin เหมาะมากสำหรับสาย data ที่ใช้ Apache Sparks
 
@@ -13,6 +13,7 @@ date:	2019-01-05
 * Integrate กับ Sparks และ SQL เนียนๆ visualization สวยๆ
 * วาง widget ไว้แนวขวางได้ด้วย ไม่ต้องเป็นแนวนอนอย่างเดียว
 * ปรับแต่ง UI ได้ด้วย Angular
+
 #### วิธีลง
 
 ลง Sparks ก่อน เวลาลงถ้าไม่ได้ใช้ java8 ตัว brew จะบ่นๆ
@@ -30,7 +31,9 @@ zeppelin-daemon.sh startจากนั้นก็ไปที่ <http://local
 
 ![](/img/1*MUoSJyRMxXiHoCriPSn3eA.png)![](/img/1*tys4wJ80RajCGMLiAQr3fw.png)เมื่อรันเสร็จแล้วสามารถไปดู Job ใน Sparks UI ได้ด้วย
 
-![](/img/1*UE-oV1Fa2XvnBuoJhxZrpg.png)![](/img/1*WiuFWLgZ9CO8871ujtStLw.png)#### Troubleshooting
+![](/img/1*UE-oV1Fa2XvnBuoJhxZrpg.png)![](/img/1*WiuFWLgZ9CO8871ujtStLw.png)
+
+#### Troubleshooting
 
 ถ้าตอนที่รันเจอ error แบบนี้
 
